@@ -1,0 +1,19 @@
+{
+  "name": "Harmony-Injector",
+  "description": "Unpacks, ",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "node inject.js"
+  },
+  "main": "./build/injector.js",
+  "devDependencies": {
+    "copy": "^0.3.0"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "asar": "^0.13.0",
+    "copy-dir": "^0.3.0",
+    "minimist": "^1.2.0",
+    "q": "^1.5.0"
+  }
+}
