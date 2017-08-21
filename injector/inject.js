@@ -32,7 +32,7 @@ function inject (sourceAsar, outputAsar) {
     return q.nfbind(fs.readFile)(path.join(extractLocation, 'index.js'), 'utf8')
   })
   .then(data => {
-    return data.replace('require(\'electron\');', 'require(\'electron\');\n\nconst Harmony = require(\'harmony\');')
+    return data.replace('require(\'electron\');', 'require(\'electron\');\n\nrequire(\'harmony\') // Harmony injection')
   }).then(data => {
     return q.nfbind(fs.writeFile)(path.join(extractLocation, 'index.js'), data, 'utf8')
   }).then(() => {
